@@ -1,0 +1,363 @@
+/* First Navbar */
+:root {
+  --primary: black; /* Black */
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+
+/* Override Bootstrap's dark background color */
+.bg-dark {
+  background-color: black !important;
+}
+.first-navbar {
+  background-color: white;
+  padding: 30px 0;
+}
+
+.first-navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Second Navbar */
+.second-navbar {
+  background-color: white; /* Initial background color */
+  width: 100%;
+}
+.scrolled {
+  background-color: whitesmoke; /* Background color when scrolled */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+/* Your CSS styles here */
+/* Style the second navbar */
+.second-navbar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.second-navbar ul li {
+  display: inline-block;
+}
+
+.second-navbar ul li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 0px;
+  text-decoration: none;
+}
+
+/* Style the dropdown menu */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: black;
+}
+
+.dropdown-menu li {
+  display: block;
+  padding: 12px;
+}
+
+.dropdown-menu li a {
+  color: white;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Show dropdown menu when parent li is hovered */
+.second-navbar ul li:hover .dropdown-menu {
+  display: block;
+}
+
+/* Main Section */
+.main-section {
+  margin-top: 30px; /* Height of first + second navbars */
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex; /* Use flexbox for layout */
+}
+
+/* Adjustments for the filter and product sections */
+.filter-section {
+  float: left;
+  margin-right: 10px;
+  width: 15%;
+}
+
+.product-section {
+  width: 100%; /* Take up remaining space */
+}
+
+.reopen-filter {
+  float: left;
+  margin-right: 10px; /* Adjust the margin for spacing */
+  height: 50px;
+  width: 20px;
+}
+
+/* Product Section */
+.product-section {
+  float: right;
+  width: 85%;
+}
+/* Override Bootstrap button styles */
+.btn {
+  width: 120px;
+  font-size: 80%;
+  color: #a0a0a0;
+  text-align: center;
+  border: 1px solid #a0a0a0;
+  padding: 8px 0;
+  margin-left: 1px;
+  border-radius: 0px !important;
+}
+
+/* Override Bootstrap primary button styles */
+.btn-primary {
+  background-color: white;
+  border-color: 1px solid #a0a0a0;
+  color: #a0a0a0;
+}
+
+/* Styling for the hover effect */
+.btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Styling for the hover effect on primary buttons */
+.btn-primary:hover {
+  background-color: black;
+  border-color: black;
+}
+/* Product Card Styles */
+.card {
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  position: relative;
+  padding: 0;
+}
+
+.card-header .badge {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  z-index: 1;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  margin-bottom: 15px;
+}
+
+.price-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.previous-price {
+  color: #888;
+  text-decoration: line-through;
+}
+
+.current-price {
+  font-weight: bold;
+}
+
+.discount {
+  color: green;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Center align the "Add to Cart" button */
+.text-center {
+  text-align: center;
+}
+.filter-div:hover {
+  background-color: whitesmoke;
+}
+/* Custom CSS for small images */
+.small-images .col-6 {
+  border: 1px solid #ccc; /* Add border to each column */
+  padding: 5px; /* Add some padding */
+  margin: 2px;
+  transition: transform 0.3s, cursor 0.3s; /* Add transition effect for transform and cursor */
+}
+
+.small-images .col-6 img {
+  width: 100%; /* Make the image fill the column */
+  height: 100%; /* Make the image fill the column */
+  object-fit: cover; /* Ensure the image fills the column while preserving aspect ratio */
+}
+
+/* Enlarge and change cursor on hover */
+.small-images .col-6:hover {
+  transform: scale(1.35); /* Enlarge the div on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+/* Custom CSS for modal positioning */
+.modal-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 400px; /* Adjust the width as needed */
+  max-width: 90%; /* Set a maximum width to prevent the modal from occupying the entire screen */
+}
+/* Style for Continue Shopping button */
+#btn-continue:hover {
+  background-color: white !important;
+  color: black !important;
+  border-color: 1px solid black !important;
+  cursor: pointer;
+}
+
+/* Style for Proceed to Checkout button */
+#btn-checkout:hover {
+  background-color: black !important;
+  color: white !important;
+  border-color: black !important;
+  cursor: pointer;
+}
+  /* Custom CSS styles */
+  .image-card {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    animation: slideInRight 1s ease forwards;
+}
+
+.image-card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.image-card .card-details {
+    padding: 10px;
+}
+
+.image-card .card-price {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.welcome-header {
+    animation: dropFromTop 1s forwards, changeColor 4s infinite;
+}
+
+@keyframes dropFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        color: #007bff;
+    }
+    25% {
+        color: #ff0000;
+    }
+    50% {
+        color: black;
+    }
+    75% {
+        color: green;
+    }
+    100% {
+        color: #007bff;
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Hide the quick view button by default */
+.quick-view-btn {
+
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Show the quick view button on hover */
+.product-card:hover .quick-view-btn {
+  background-color: black;
+  color: white;
+  padding: 6px;
+  border: 1px solid black;
+  display: block;
+}
+.product-card:hover .quick-view-btn:hover{
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
+
+/* Add transition for smooth animation */
+.product-card {
+  transition: transform 0.3s ease;
+}
+
+/* Increase card size on hover */
+.product-card:hover {
+  transform: scale(1.15);
+}
