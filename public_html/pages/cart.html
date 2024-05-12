@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparkle Collections</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <style>
+        /* Add border to each row */
+        .cart-item {
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+    
+        /* Style for product image */
+        .cart-item img {
+            max-width: 50px;
+            max-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- First Navbar (div for logo, sign-in, and cart icons) -->
+    <div class="container first-navbar">
+        <div class="d-flex justify-content-between align-items-center">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#" style="font-size: 30px; color: #888;">Sparkle Collections</a>
+
+            <!-- Sign in, favorites, and cart icons -->
+            <div class="d-flex align-items-center">
+                <a class="nav-link" href="./login.html" style="font-size: 20px; color: #888;"><i class="bi bi-person-fill"></i> Sign in</a>
+                <a class="nav-link" href="#" style="font-size: 20px; color: #888;"><i class="bi bi-heart-fill"></i></a>
+                <a class="nav-link" href="#" style="font-size: 20px; color: #888;"><i class="bi bi-cart-fill"></i></a>
+            </div>
+        </div>
+    </div>
+    <!-- Second Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light second-navbar">
+        <div class="container">
+            <!-- Navbar Toggler Button -->
+            <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <!-- Dropdown Menu Items -->
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdown1"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >Clothing</a
+                        >
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            .
+                            <li><a class="dropdown-item" href="#">Men's Clothing</a></li>
+                            <li><a class="dropdown-item" href="#">Women's Clothing</a></li>
+                            <li><a class="dropdown-item" href="#">Kids Clothing</a></li>
+                            <li><a class="dropdown-item" href="#">Sportswear</a></li>
+                        </ul>
+                    </li>
+                    <!-- Add more dropdown items as needed -->
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdown2"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >Shoes</a
+                        >
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="#">Sneakers</a></li>
+                            <li><a class="dropdown-item" href="#">Boots</a></li>
+                            <li><a class="dropdown-item" href="#">Sandals</a></li>
+                            <li><a class="dropdown-item" href="#">High Heels</a></li>
+                            <li><a class="dropdown-item" href="#">Slippers</a></li>
+                        </ul>
+                    </li>
+                    <!-- Add more dropdown items as needed -->
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdown3"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >Accessories</a
+                        >
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                            <li><a class="dropdown-item" href="#">Bags</a></li>
+                            <li><a class="dropdown-item" href="#">Hats</a></li>
+                            <li><a class="dropdown-item" href="#">Belts</a></li>
+                            <li><a class="dropdown-item" href="#">Scarves</a></li>
+                            <li><a class="dropdown-item" href="#">Jewelry</a></li>
+                        </ul>
+                    </li>
+                    <!-- Add more dropdown items as needed -->
+                    <li class="nav-item dropdown">
+                        <a
+                            class="nav-link dropdown-toggle"
+                            href="#"
+                            id="navbarDropdown4"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                            >Exclusive Items</a
+                        >
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                            <li><a class="dropdown-item" href="#">Limited Edition</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Designer Collection</a>
+                            </li>
+                            <li><a class="dropdown-item" href="#">Luxury Items</a></li>
+                            <li>
+                                <a class="dropdown-item" href="#">Customized Products</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <!-- Add more dropdown items as needed -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+     <!-- Cart section  -->
+        <div class="cart-section"></div>
+    </div>
+     <!-- Footer -->
+     <footer class="footer mt-5 bg-dark text-white ">
+        <div class="container py-4">
+            <div class="row">
+                <!-- Column 1: Logo, Sparkle Collections, Contact us, Our store -->
+                <div class="col-md-3">
+                    <h5 class="mb-3">Sparkle Collections</h5>
+                    <p>Contact us</p>
+                    <p>Our store</p>
+                </div>
+                <!-- Column 2: Speak to our representatives -->
+                <div class="col-md-3">
+                 <h5 class="mb-2">Speak to our representatives</h5>
+                 <form>
+                     <div class="input-group mb-3">
+                         <input type="text" class="form-control" placeholder="Enter your message">
+                         <div class="input-group-append">
+                             <button type="submit" class="btn btn-primary" style="width: 48px;">Submit</button>
+                         </div>
+                     </div>
+                 </form>
+             </div>            
+                <!-- Column 3: Follow us on social media -->
+                <div class="col-md-3">
+                    <h5 class="mb-2">Follow us on</h5>
+                    <ul class="list-unstyled">
+                        <li class="pr-2">Twitter<i class="bi bi-twitter"></i></li>
+                        <li class="pr-2">Instagram <i class="bi bi-instagram"></i></li>
+                        <li class="pr-2">Facebook <i class="bi bi-facebook"></i></li>
+                        <li class="pr-2">Pinterest <i class="bi bi-pinterest"></i></li>
+                        <li class="pr-2">TikTok  <i class="bi bi-tiktok"></i></li>
+                    </ul>
+                </div>
+                <!-- Column 4: Privacy and policies -->
+                <div class="col-md-3">
+                    <h5 class="mb-2">Privacy and policies</h5>
+                    <p>Privacy Policy</p>
+                    <p>Terms of Service</p>
+                </div>
+         </div>
+     </div>
+     </footer>
+    <!-- Copyright -->
+    <div class="container-fluid text-center bg-dark text-white py-3">
+        <p>&copy; 2024 Sparkle Collections. All Rights Reserved.</p>
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    fetchCartItems();
+});
+
+function fetchCartItems() {
+    fetch('/api/cart')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(cartData => {
+        // Fetch products to get additional information
+        return fetch('/api/products')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(productData => {
+    // Combine cart items with product information
+    const cartItems = cartData.cartItems.map(cartItem => {
+        // Find the corresponding product in the productData array
+        const product = productData.find(product => product._id === cartItem.productId);
+        
+        // Check if product is found
+        if (product) {
+            // If product is found, extract the desired properties
+            const productName = product.name;
+            const productImage = product.images[0]; // Assuming you want the first image
+            const productPrice = product.current_price;
+            
+            // Return the cart item with additional product information
+            return { 
+                ...cartItem, 
+                productName: productName, 
+                price: productPrice, 
+                image: productImage 
+            };
+        } else {
+            // If product is not found, handle the case gracefully
+            console.log(`Product with ID ${cartItem.productId} not found.`);
+            return { 
+                ...cartItem, 
+                productName: 'Product Not Found', 
+                price: 0, 
+                image: '' 
+            };
+        }
+    });
+    return cartItems;
+});
+
+    })
+    .then(cartItems => {
+    // Populate the cart section with fetched items
+    const cartContainer = document.querySelector('.cart-section');
+    cartContainer.innerHTML = ''; // Clear existing content
+
+    cartItems.forEach(cartItem => {
+        const div = document.createElement('div');
+        div.classList.add('cart-item', 'row', 'd-flex', 'align-items-center');
+
+        // Create columns for each cart item detail
+        const imageCol = document.createElement('div');
+        imageCol.classList.add('col');
+        const image = document.createElement('img');
+        image.src = cartItem.image; // Assuming you have the image URL in cartItem.image
+        image.alt = cartItem.productName;
+        imageCol.appendChild(image);
+        div.appendChild(imageCol);
+
+        const nameCol = document.createElement('div');
+        nameCol.classList.add('col');
+        nameCol.textContent = cartItem.productName;
+        div.appendChild(nameCol);
+
+        const quantityCol = document.createElement('div');
+        quantityCol.classList.add('col');
+        const quantityInput = document.createElement('input');
+        quantityInput.type = 'number';
+        quantityInput.value = cartItem.quantity;
+        quantityInput.min = '1'; // Assuming minimum quantity is 1
+        quantityInput.classList.add('quantity-input');
+        quantityCol.appendChild(quantityInput);
+        div.appendChild(quantityCol);
+
+        const priceCol = document.createElement('div');
+        priceCol.classList.add('col');
+        priceCol.textContent = cartItem.price * cartItem.quantity; // Assuming you calculate the total price
+        div.appendChild(priceCol);
+
+        const removeCol = document.createElement('div');
+        removeCol.classList.add('col');
+        const removeButton = document.createElement('button');
+        removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
+        removeButton.textContent = 'Remove';
+        removeButton.addEventListener('click', () => removeItem(cartItem.productId));
+        removeCol.appendChild(removeButton);
+        div.appendChild(removeCol);
+
+        // Append the row to the cart container
+        cartContainer.appendChild(div);
+    });
+})
+
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
+
+function removeItem(productId) {
+    fetch(`/api/cart/remove/${productId}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        fetchCartItems(); // Refresh cart items after removal
+    })
+    .catch(error => {
+        console.error('There was a problem with the fetch operation:', error);
+    });
+}
+
+</script> 
+       <!-- Link to jQuery, Popper.js, and Bootstrap JS -->
+       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body> 
+</html>
+       
