@@ -139,52 +139,39 @@
         <hr class="py-3">
         <div class="row">
             <!-- Small Images Column (Hidden on Small Screens) -->
-            <div class="col-md-3 d-none d-md-block">
-                <div class="small-images row">
-                    <!-- Add small images here -->
-                    <div class="col-6 mb-2">
-                        <img src="https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/vince-camuto-flutter-long-sleeve-v-neck-tunic/00000000_zi_eb5a3530-a913-4d5d-8f3c-3b8a493f1a30.jpg" alt="Small Image 1" class="img-fluid" onclick="displayLargeImage('https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/vince-camuto-flutter-long-sleeve-v-neck-tunic/00000000_zi_eb5a3530-a913-4d5d-8f3c-3b8a493f1a30.jpg')">
-                    </div>
-                    <div class="col-6 mb-2">
-                        <img src="https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/vince-camuto-flutter-long-sleeve-v-neck-tunic/00000000_zi_1f02acc8-8ba7-493e-a197-6e0478365cd2__02_ai.jpg" alt="Small Image 3" class="img-fluid" onclick="displayLargeImage('https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/vince-camuto-flutter-long-sleeve-v-neck-tunic/00000000_zi_1f02acc8-8ba7-493e-a197-6e0478365cd2__02_ai.jpg')">
-                    </div>
-                    <div class="col-6 mb-2">
-                        <img src="https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/vince-camuto-flutter-long-sleeve-v-neck-tunic/00000000_zi_1f02acc8-8ba7-493e-a197-6e0478365cd2.jpg" alt="Small Image 4" class="img-fluid" onclick="displayLargeImage('https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/vince-camuto-flutter-long-sleeve-v-neck-tunic/00000000_zi_1f02acc8-8ba7-493e-a197-6e0478365cd2.jpg')">
-                    </div>
-                    <div class="col-6 mb-2">
-                        <img src="https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/vince-camuto-flutter-long-sleeve-v-neck-tunic/00000000_zi_235fce98-3f0a-47a7-bd26-4805248a3c62__01_ai.jpg" alt="Small Image 5" class="img-fluid" onclick="displayLargeImage('https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/vince-camuto-flutter-long-sleeve-v-neck-tunic/00000000_zi_235fce98-3f0a-47a7-bd26-4805248a3c62__01_ai.jpg')">
-                    </div>
-                    <div class="col-6 mb-2">
-                        <img src="https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/vince-camuto-flutter-long-sleeve-v-neck-tunic/00000000_zi_9fca88c9-8f17-4467-a8bd-210df9f7e546.jpg" alt="Small Image 6" class="img-fluid" onclick="displayLargeImage('https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/vince-camuto-flutter-long-sleeve-v-neck-tunic/00000000_zi_9fca88c9-8f17-4467-a8bd-210df9f7e546.jpg')">
-                    </div>
-                    <!-- Add more small images as needed -->
+            <div class="col-md-2 d-none d-md-block">
+                <div class="small-images row" id="small_images">
+                
                 </div>
             </div>
             <!-- Large Image Column -->
             <div class="col-md-6">
+                <!-- Large product image -->
                 <div class="large-image">
-                    <!-- Large product image -->
-                    <img src="https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/vince-camuto-flutter-long-sleeve-v-neck-tunic/00000000_zi_eb5a3530-a913-4d5d-8f3c-3b8a493f1a30.jpg" alt="Large Image" id="largeImage" class="img-fluid">
+                    <img src="" alt="Large Image" id="largeImage" class="img-fluid">
                 </div>
             </div>
          <!-- Product Description Column -->
-        <div class="col-md-3">
+        <div class="col-md-4 mt-sm-4">
             <div class="product-description">
                 <!-- Product Name -->
-                <h2>Product Name</h2>
-            
+                <h2></h2>
+                <p></p>
                 <!-- Star Rating -->
-                <div class="rating">
+                <div class="rating py-2">
                     <!-- Rating stars or other rating component -->
+                    <p class="" id="rating">
+
+                    </p>
                 </div>
             
                 <!-- Size Selection Option -->
                 <div class="form-group">
                     <label for="size">Select Size:</label>
                     <select class="form-control" id="size">
-                        <option>Small</option>
+                        <!-- <option>Small</option>
                         <option>Medium</option>
-                        <option>Large</option>
+                        <option>Large</option> -->
                     </select>
                 </div>
             
@@ -192,9 +179,9 @@
                 <div class="form-group">
                     <label for="color">Select Color:</label>
                     <select class="form-control" id="color">
-                        <option>Red</option>
+                        <!-- <option>Red</option>
                         <option>Blue</option>
-                        <option>Green</option>
+                        <option>Green</option> -->
                     </select>
                 </div>
             
@@ -203,26 +190,39 @@
                     <div class="py-3 border-bottom">
                         <!-- About This Item -->
                         <h5>About This Item</h5>
-                        <p>Description of the product goes here. Description of the product goes here. Description of the product goes here.</p>
+                        <!-- <p>Description of the product goes here. Description of the product goes here. Description of the product goes here.</p> -->
                     </div>
                     <div class="pt-4">
                         <!-- Product Details -->
                         <h5>Product Details</h5>
                         <ul>
-                            <li>Material: Cotton</li>
+                            <!-- <li>Material: Cotton</li>
                             <li>Fit: Regular</li>
-                            <li>Model Height: 5'8"</li>
+                            <li>Model Height: 5'8"</li> -->
                         </ul>
                     </div>
+                    <!-- Quantity Selection -->
+                    <div class="form-group">
+                        <label for="quantity">Quantity:</label>
+                        <div class="input-group">
+                            <button id="decreaseBtn" class="btn btn-outline-secondary" type="button">-</button>
+                            <input type="number" class="form-control text-center" id="quantity"value="1" placeholder="1" min="1">
+                            <button id="increaseBtn" class="btn btn-outline-secondary" type="button">+</button>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-end align-items-center">
+                        <p class="text-end" id="price"></p>
+                    </div>
+
                 </div>
             
                 <!-- Button to add to cart -->
                 <div class="d-flex justify-content-center align-items-center">
-                    <button onclick="addToCartClicked(this.parentNode.parentNode.parentNode)" class="btn btn-primary mt-3" style="background-color: black; width: 100%; padding: 16px; color: white;">Add to Cart</button>
+                    <button onclick="addToCartAndOpenModal(this.parentNode.parentNode.parentNode, productId)" class="btn btn-primary mt-3" style="background-color: black; width: 100%; padding: 16px; color: white;">Add to Cart</button>
                 </div>
             </div>
         </div>
-        
         </div>
     </div>
 
@@ -230,72 +230,8 @@
     <hr>
     <div class="container mt-5">
         <h2 class="text-start mb-4">Featured Products</h2>
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="https://i5.walmartimages.com/seo/Women-s-Blouses-Tee-Regular-Non-Stretch-Plain-Elegant-Plain-Top-V-neck-Baby-Blue-Blouses_7fd40bee-a35c-4eea-a639-662b9392e0c0.50aedada49ce6da317ee495d95260cb6.jpeg" class="card-img-top" alt="Featured Product 1"style="height: 300px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Product Name</h5>
-                        <p class="card-text">Description of the product goes here.</p>
-                        <p class="card-text">$19.99</p>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <button onclick="addToCartClicked(this.parentNode.parentNode.parentNode)" class="btn btn-primary">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="https://www.lilysilk.com/media/catalog/product/4/_/4_5616.jpg?quality=80&bg-color=255%2C255%2C255&fit=bounds&width=1800" class="card-img-top" alt="Featured Product 2" style="height: 300px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Product Name</h5>
-                        <p class="card-text">Description of the product goes here.</p>
-                        <p class="card-text">$19.99</p>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <button onclick="addToCartClicked(this.parentNode.parentNode.parentNode)" class="btn btn-primary">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="https://www.lilysilk.com/media/catalog/product/4/_/4_5616.jpg?quality=80&bg-color=255%2C255%2C255&fit=bounds&width=1800" class="card-img-top" alt="Featured Product 2" style="height: 300px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Product Name</h5>
-                        <p class="card-text">Description of the product goes here.</p>
-                        <p class="card-text">$19.99</p>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <button onclick="addToCartClicked(this.parentNode.parentNode.parentNode)" class="btn btn-primary">Add to Cart</button>
-                        </div>                    
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="https://johnlewis.scene7.com/is/image/JohnLewis/mw-shirts-100224" class="card-img-top" alt="Featured Product 2" style="height: 300px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Product Name</h5>
-                        <p class="card-text">Description of the product goes here.</p>
-                        <p class="card-text">$19.99</p>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <button onclick="addToCartClicked(this.parentNode.parentNode.parentNode)" class="btn btn-primary">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                <div class="card">
-                    <img src="https://ke.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/08/957917/1.jpg?2982" class="card-img-top" alt="Featured Product 2" style="height: 300px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Product Name</h5>
-                        <p class="card-text">Description of the product goes here.</p>
-                        <p class="card-text">$19.99</p>
-                        <div class="d-flex justify-content-center align-items-center">
-                            <button onclick="addToCartClicked(this.parentNode.parentNode.parentNode)"  class="btn btn-primary">Add to Cart</button>
-                        </div>
-                    </div>
-                </div>
-            </div>        
+        <div class="row" id="featuredProducts">
+
         </div>
     </div>
     <!-- Footer -->
@@ -345,32 +281,33 @@
     <div class="container-fluid text-center bg-dark text-white py-3">
         <p>&copy; 2024 Sparkle Collections. All Rights Reserved.</p>
     </div>
-   <!-- Modal -->
-    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-right"> <!-- Add modal-right class -->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="cartModalLabel">Shopping Cart (<span id="cartItemCount">0</span> items)</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
+<!-- Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-right"> <!-- Add modal-right class -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="cartModalLabel">Shopping Cart (<span id="cartItemCount">0</span> items)</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="cartModalBody">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div class="modal-footer d-flex flex-column">
+                <div class="mb-2 w-100">
+                    <button id="btn-continue" type="button" class="btn btn-primary w-100 " data-dismiss="modal" style="padding: 10px; background-color: black; font-size: 18px; color: white; border: black;">Continue Shopping</button>
                 </div>
-                <div class="modal-body">
-                    <!-- Cart items will be dynamically added here -->
+                <div class="w-100">
+                   <a href="http://localhost:3000/pages/cart.html">
+
+                       <button id="btn-checkout" class="btn btn-primary w-100" style="padding: 10px; background-color: white; font-size: 18px; color: black; border: 1px solid black">Proceed to Checkout</button>
+                   </a> 
                 </div>
-                <div class="modal-footer d-flex flex-column">
-                    <div class="mb-2 w-100">
-                        <button id="btn-continue" type="button" class="btn btn-primary w-100 " data-dismiss="modal" style="padding: 10px; background-color: black; font-size: 18px; color: white; border: black;">Continue Shopping</button>
-                    </div>
-                    <div class="w-100">
-                        <button id="btn-checkout" class="btn btn-primary w-100" style="padding: 10px; background-color: white; font-size: 18px; color: black; border: 1px solid black">Proceed to Checkout</button>
-                    </div>
-                </div>
-                
-                
             </div>
         </div>
     </div>
+</div>
 
     <!-- Link to jQuery, Popper.js, and Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
@@ -380,6 +317,103 @@
     <script src="../js/popper.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
     <script src="../js/singleProduct.js"></script>
+    <script src="../js/singleProductApi.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get the product ID from the URL query parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+    
+            // Fetch the product details from the backend API
+            fetch(`http://localhost:3000/api/products/${productId}`)
+                .then(response => response.json())
+                .then(product => {
+                    // Populate the product content with the fetched data
+                    const productName = document.querySelector('.product-description h2');
+                    productName.textContent = product.name;
+    
+                    // Update the "Add to Cart" button to pass productId, productName, and quantity
+                    const addToCartButton = document.querySelector('.btn-primary');
+                    addToCartButton.onclick = function() {
+                        const productContainer = document.querySelector('.product-description');
+                        const quantityInput = document.getElementById('quantity');
+                        const quantity = parseInt(quantityInput.value);
+                        addToCartAndOpenModal(product, quantity);
+                    };
+    
+                    // Your existing code continues...
+                })
+                .catch(error => {
+                    console.error('Error fetching product details:', error);
+                });
+        });
+    
+        function addToCartAndOpenModal(product, quantity) {
+            // Add the product to the cart
+            addToCart(product, quantity);
+    
+            // Open the modal
+            $('#cartModal').modal('show');
+            const items_count=document.getElementById('cartItemCount');
+            items_count.textContent=quantity;
+            // Update the modal body to display the added product
+            const modalBody = document.querySelector('.modal-body');
+            const productDetails = `
+                    <div class="row">
+                        <!-- Column 1: Product Image -->
+                        <div class="col-md-4">
+                            <img src="${product.images[0]}" class="img-fluid" alt="Product Image">
+                        </div>
+                        <!-- Column 2: Product Name and Quantity -->
+                        <div class="col-md-4">
+                            <p>Name: ${product.name}</p>
+                            <p>Quantity: ${quantity}</p>
+                            <!-- Add more product details here as needed -->
+                        </div>
+                        <!-- Column 3: Price -->
+                        <div class="col-md-4">
+                            <p>Total Price: $${product.current_price * quantity}</p>
+                        </div>
+                    </div>
+                `;
+                
+            modalBody.innerHTML = productDetails;
+        }
+    
+        function addToCart(product, quantity) {
+            // Log the product data being added to the cart
+            console.log('Adding product to cart:', product);
+            const id  = product._id;
+    
+            // Send a POST request to the endpoint to add the product to the cart
+            fetch('http://localhost:3000/api/cart/add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(
+                    {
+                        productId: id,
+                        quantity: quantity
+                    }
+                ),
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Show success message or update UI
+                    console.log('Product added to cart successfully');
+                } else {
+                    // Handle errors or show error message
+                    console.error('Error adding product to cart');
+                }
+            })
+            .catch(error => {
+                console.error('Error adding product to cart:', error);
+            });
+        }
+
+    </script>
+    
   
 </body>
 </html>
