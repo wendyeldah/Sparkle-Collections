@@ -9,21 +9,15 @@
   --light: #f8f9fa;
   --dark: #343a40;
 }
-
 /* Override Bootstrap's dark background color */
 .bg-dark {
   background-color: black !important;
 }
 .first-navbar {
   background-color: white;
-  padding: 30px 0;
+  padding-top: 12px;
 }
 
-.first-navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 
 /* Second Navbar */
 .second-navbar {
@@ -37,29 +31,8 @@
   width: 100%;
   z-index: 1000;
   transition: background-color 0.3s ease;
-  color: white;
+  color: white !important;
 }
-/* Your CSS styles here */
-/* Style the second navbar */
-.second-navbar ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.second-navbar ul li {
-  display: inline-block;
-}
-
-.second-navbar ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 0px;
-  text-decoration: none;
-}
-
-/* Style the dropdown menu */
 .dropdown-menu {
   display: none;
   position: absolute;
@@ -68,12 +41,13 @@
 
 .dropdown-menu li {
   display: block;
-  padding: 12px;
+  width: 100%;
+  text-align: left;
 }
 
 .dropdown-menu li a {
   color: white;
-  padding: 12px;
+  padding: 8px;
   text-decoration: none;
   display: block;
 }
@@ -97,10 +71,53 @@
   margin-right: 10px;
   width: 15%;
 }
+@media (max-width: 767px) {
+  .filter-section {
+    display: none;
+  }
 
+}
+/* Custom CSS to position modal to the right side of the screen */
+.modal-dialog-side.modal-dialog-right {
+  /* position: fixed; */
+  right: 0;
+  margin-right: 2px;
+  margin-left: auto;
+  width: 320px; /* Adjust as needed */
+  max-width: calc(100% - 40px); /* Adjust as needed */
+}
+.filter-div > h5{
+  font-size: 0.8rem;
+}
+.filter-category ul li{
+  font-size: 0.8rem;
+
+}
 .product-section {
   width: 100%; /* Take up remaining space */
 }
+@media (max-width: 767px) {
+  /* First Navbar */
+  .first-navbar {
+    padding: 10px 0; /* Add padding for spacing */
+  }
+  
+  .navbar-brand {
+    font-size: 20px; /* Decrease font size for smaller screens */
+  }
+  
+  .nav-link {
+    font-size: 16px; /* Decrease font size for smaller screens */
+  }
+
+  /* Product Section */
+  .product-section {
+    width: 100%; /* Occupy full width */
+    margin: 0 auto; /* Center horizontally */
+    padding: 20px; /* Add padding for spacing */
+  }
+}
+
 
 .reopen-filter {
   float: left;
@@ -117,11 +134,11 @@
 /* Override Bootstrap button styles */
 .btn {
   width: 120px;
-  font-size: 80%;
+  font-size: 0.8rem;
   color: #a0a0a0;
   text-align: center;
   border: 1px solid #a0a0a0;
-  padding: 8px 0;
+  padding: 5px 0;
   margin-left: 1px;
   border-radius: 0px !important;
 }
@@ -168,22 +185,34 @@
 }
 
 .card-body {
-  padding: 20px;
+  padding: 6px; /* Adjust the padding as needed */
 }
 
 .card-title {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
 .card-text {
-  margin-bottom: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 12px;
+  font-size: 0.8rem;
 }
 
+/* Show description on hover */
+.card:hover .card-text {
+  white-space: initial;
+  overflow: initial;
+  text-overflow: initial;
+}
 .price-section {
   display: flex;
   justify-content: space-between;
+  font-size: 0.8rem;
+
 }
 
 .previous-price {
@@ -195,18 +224,31 @@
   font-weight: bold;
 }
 
-.discount {
-  color: green;
-  font-size: 0.9rem;
-  font-style: italic;
-}
-
 /* Center align the "Add to Cart" button */
 .text-center {
   text-align: center;
 }
 .filter-div:hover {
-  background-color: whitesmoke;
+  color: white;
+  background: #606c88;
+  background: -webkit-linear-gradient(to right, #423e54, #525c74);
+  background: linear-gradient(to right, #423e54, #545f78);
+}
+  
+.filter-div > h3{
+  font-size: 1.4rem;
+  color: white;
+  background: #606c88;
+  background: -webkit-linear-gradient(to right, #423e54, #525c74);
+  background: linear-gradient(to right, #423e54, #545f78);
+}
+
+#filter-li:hover{
+  background: #606c88;
+  padding: 0.3rem;
+  font-size: 0.9rem;
+  background: -webkit-linear-gradient(to right, #423e54, #525c74);
+  background: linear-gradient(to right, #423e54, #545f78);
 }
 /* Custom CSS for small images */
 .small-images .col-6 {
@@ -342,14 +384,18 @@
 .product-card:hover .quick-view-btn {
   background-color: black;
   color: white;
-  padding: 6px;
+  padding: 2px;
   border: 1px solid black;
   display: block;
+  font-size: 0.7rem;
+
 }
 .product-card:hover .quick-view-btn:hover{
   background-color: white;
   color: black;
   border: 1px solid black;
+  outline-width: 0cap;
+  outline-color: black;
 }
 
 /* Add transition for smooth animation */
@@ -360,4 +406,44 @@
 /* Increase card size on hover */
 .product-card:hover {
   transform: scale(1.15);
+}
+.footer{
+  color: #888 !important;
+  font-size: 0.9rem;
+}
+.footer h5{
+  font-size: 1.25rem;
+}
+.footer ul li{
+  font-size: 0.9rem;
+}
+.footer p{
+  font-size: 0.9rem;
+
+}
+.slanted-button {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  background: #606c88;
+  background: -webkit-linear-gradient(to right, #1F1C2C, #525c74);
+  background: linear-gradient(to right, #1F1C2C, #545f78);
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  /* Adjusted for left slant */
+  transition: clip-path 0.3s ease;
+}
+
+.slanted-button:hover {
+  /* Adjusted for right slant */
+  background: black;
+  background: -webkit-linear-gradient(to right, #000000, #796c6c);
+  background: linear-gradient(to right, #000000, #565151);
+  text-decoration: none;
+  color: white !important;
+
 }
