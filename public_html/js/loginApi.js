@@ -29,9 +29,13 @@ document.addEventListener('DOMContentLoaded', function () {
         })
         .then(data => {
             // Handle successful login
-            console.log('Login successful:', data); // Log successful login data
-            alert('Login successful'); // Display alert
-            window.location.href = '/index.html'; // Redirect to dashboard
+            if (data.user) {
+                // Store user data in localStorage
+                localStorage.setItem('loggedInUser', JSON.stringify(data.user));
+                
+                // Redirect to dashboard after updating UI
+                window.location.href = '/index.html';
+            }
         })
         .catch(error => {
             // Handle login error

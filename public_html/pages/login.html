@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sparkle Collections</title>
+    <link rel="icon" href="../images/logo.png" type="image/png">
+
     <!-- Link to Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- First Navbar (div for logo, sign-in, and cart icons) -->
     <div class="container first-navbar">
@@ -18,7 +22,8 @@
 
             <!-- Sign in, favorites, and cart icons -->
             <div class="d-flex align-items-center">
-                <a class="nav-link" href="./login.html" style="font-size: 20px; color: #888;"><i class="bi bi-person-fill"></i> Sign in</a>
+                <a class="nav-link" href="./login.html" style="font-size: 20px; color: #888;"><i
+                        class="bi bi-person-fill"></i> Sign in</a>
                 <a class="nav-link" href="#" style="font-size: 20px; color: #888;"><i class="bi bi-heart-fill"></i></a>
                 <a class="nav-link" href="#" style="font-size: 20px; color: #888;"><i class="bi bi-cart-fill"></i></a>
             </div>
@@ -28,15 +33,8 @@
     <nav class="navbar navbar-expand-lg navbar-light second-navbar">
         <div class="container">
             <!-- Navbar Toggler Button -->
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -45,84 +43,51 @@
                 <ul class="navbar-nav mx-auto">
                     <!-- Dropdown Menu Items -->
                     <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown1"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >Clothing</a
-                        >
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clothing</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                            .
-                            <li><a class="dropdown-item" href="#">Men's Clothing</a></li>
-                            <li><a class="dropdown-item" href="#">Women's Clothing</a></li>
-                            <li><a class="dropdown-item" href="#">Kids Clothing</a></li>
-                            <li><a class="dropdown-item" href="#">Sportswear</a></li>
+                            <li><a class="dropdown-item" href="/mens">Men's Clothing</a></li>
+                            <li><a class="dropdown-item" href="/womens">Women's Clothing</a></li>
+                            <li><a class="dropdown-item" href="kids">Kids Clothing</a></li>
+                            <li><a class="dropdown-item" href="/sportswear">Sportswear</a></li>
                         </ul>
                     </li>
                     <!-- Add more dropdown items as needed -->
                     <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown2"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >Shoes</a
-                        >
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shoes</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            <li><a class="dropdown-item" href="#">Sneakers</a></li>
-                            <li><a class="dropdown-item" href="#">Boots</a></li>
-                            <li><a class="dropdown-item" href="#">Sandals</a></li>
-                            <li><a class="dropdown-item" href="#">High Heels</a></li>
-                            <li><a class="dropdown-item" href="#">Slippers</a></li>
+                            <li><a class="dropdown-item" href="/sneakers">Sneakers</a></li>
+                            <li><a class="dropdown-item" href="/boots">Boots</a></li>
+                            <li><a class="dropdown-item" href="/sandals">Sandals</a></li>
+                            <li><a class="dropdown-item" href="/high-heels">High Heels</a></li>
+                            <li><a class="dropdown-item" href="/slippers">Slippers</a></li>
                         </ul>
                     </li>
                     <!-- Add more dropdown items as needed -->
                     <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown3"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >Accessories</a
-                        >
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accessories</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                            <li><a class="dropdown-item" href="#">Bags</a></li>
-                            <li><a class="dropdown-item" href="#">Hats</a></li>
-                            <li><a class="dropdown-item" href="#">Belts</a></li>
-                            <li><a class="dropdown-item" href="#">Scarves</a></li>
-                            <li><a class="dropdown-item" href="#">Jewelry</a></li>
+                            <li><a class="dropdown-item" href="/bags">Bags</a></li>
+                            <li><a class="dropdown-item" href="/hats">Hats</a></li>
+                            <li><a class="dropdown-item" href="/belts">Belts</a></li>
+                            <li><a class="dropdown-item" href="/scarves">Scarves</a></li>
+                            <li><a class="dropdown-item" href="/jewelry">Jewelry</a></li>
                         </ul>
                     </li>
                     <!-- Add more dropdown items as needed -->
                     <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown4"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >Exclusive Items</a
-                        >
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Exclusive Items</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
                             <li><a class="dropdown-item" href="#">Limited Edition</a></li>
                             <li>
-                                <a class="dropdown-item" href="#">Designer Collection</a>
+                                <a class="dropdown-item" href="/designers-collections">Designer Collection</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">Luxury Items</a></li>
+                            <li><a class="dropdown-item" href="/luxury">Luxury Items</a></li>
                             <li>
-                                <a class="dropdown-item" href="#">Customized Products</a>
+                                <a class="dropdown-item" href="/customized">Customized Products</a>
                             </li>
                         </ul>
                     </li>
@@ -154,7 +119,8 @@
                         </div>
                         <em id="passwordError" class="text-danger"></em>
                     </div>
-                    <button id="btn-continue" type="submit" class="btn btn-primary w-100" style="background-color: black; color: white; padding: 12px; font-size: 18px;">Log In</button>
+                    <button id="btn-continue" type="submit" class="btn btn-primary w-100"
+                        style="background-color: black; color: white; padding: 12px; font-size: 18px;">Log In</button>
                 </form>
                 <div class="col-md-12 mt-5" style="animation: slideInBottom 1s ease forwards;">
                     <div class="welcome-text">
@@ -175,7 +141,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="image-card">
-                            <img src="https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/john-mark-solid-woven-34-sleeve-wire-collared-button-front-patch-pocket-camp-shirt/00000002_zi_c61339a9-9782-4f1a-a504-102493a7a933.jpg" alt="Image 1">
+                            <img src="https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/john-mark-solid-woven-34-sleeve-wire-collared-button-front-patch-pocket-camp-shirt/00000002_zi_c61339a9-9782-4f1a-a504-102493a7a933.jpg"
+                                alt="Image 1">
                             <div class="card-details">
                                 <div class="card-price">$50</div>
                                 <p>Description of Product 1</p>
@@ -184,7 +151,8 @@
                     </div>
                     <div class="col-md-6">
                         <div class="image-card">
-                            <img src="https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/john-mark-crinkle-short-dolman-sleeve-wire-point-collar-button-front-shirt/00000000_zi_34985ac2-723b-435f-bcda-b2ef19ee80be.jpg" alt="Image 2">
+                            <img src="https://dimg.dillards.com/is/image/DillardsZoom/mainProduct/john-mark-crinkle-short-dolman-sleeve-wire-point-collar-button-front-shirt/00000000_zi_34985ac2-723b-435f-bcda-b2ef19ee80be.jpg"
+                                alt="Image 2">
                             <div class="card-details">
                                 <div class="card-price">$60</div>
                                 <p>Description of Product 2</p>
@@ -193,7 +161,8 @@
                     </div>
                     <div class="col-md-12">
                         <div class="image-card" style="animation: slideInBottom 1s ease forwards;">
-                            <img src="https://shopzetu.com/cdn/shop/files/aZG313WgM4-893990_400x.jpg?v=1714053228" alt="Image 3">
+                            <img src="https://shopzetu.com/cdn/shop/files/aZG313WgM4-893990_400x.jpg?v=1714053228"
+                                alt="Image 3">
                             <div class="card-details">
                                 <div class="card-price">$70</div>
                                 <p>Description of Product 3</p>
@@ -204,8 +173,8 @@
             </div>
         </div>
     </div>
-     <!-- Footer -->
-     <footer class="footer mt-5 bg-dark text-white ">
+    <!-- Footer -->
+    <footer class="footer mt-5 bg-dark">
         <div class="container py-4">
             <div class="row">
                 <!-- Column 1: Logo, Sparkle Collections, Contact us, Our store -->
@@ -216,16 +185,16 @@
                 </div>
                 <!-- Column 2: Speak to our representatives -->
                 <div class="col-md-3">
-                 <h5 class="mb-2">Speak to our representatives</h5>
-                 <form>
-                     <div class="input-group mb-3">
-                         <input type="text" class="form-control" placeholder="Enter your message">
-                         <div class="input-group-append">
-                             <button type="submit" class="btn btn-primary" style="width: 48px;">Submit</button>
-                         </div>
-                     </div>
-                 </form>
-             </div>            
+                    <h5 class="mb-2">Speak to our representatives</h5>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter your message">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary" style="width: 48px;">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 <!-- Column 3: Follow us on social media -->
                 <div class="col-md-3">
                     <h5 class="mb-2">Follow us on</h5>
@@ -234,7 +203,7 @@
                         <li class="pr-2">Instagram <i class="bi bi-instagram"></i></li>
                         <li class="pr-2">Facebook <i class="bi bi-facebook"></i></li>
                         <li class="pr-2">Pinterest <i class="bi bi-pinterest"></i></li>
-                        <li class="pr-2">TikTok  <i class="bi bi-tiktok"></i></li>
+                        <li class="pr-2">TikTok <i class="bi bi-tiktok"></i></li>
                     </ul>
                 </div>
                 <!-- Column 4: Privacy and policies -->
@@ -243,9 +212,9 @@
                     <p>Privacy Policy</p>
                     <p>Terms of Service</p>
                 </div>
-         </div>
-     </div>
-     </footer>
+            </div>
+        </div>
+    </footer>
     <!-- Copyright -->
     <div class="container-fluid text-center bg-dark text-white py-3">
         <p>&copy; 2024 Sparkle Collections. All Rights Reserved.</p>
@@ -257,6 +226,6 @@
     <script src="../js/login.js"></script>
     <script src="../js/loginApi.js"></script>
 
-    </body> 
+</body>
+
 </html>
-       

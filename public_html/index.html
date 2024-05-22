@@ -1,305 +1,403 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sparkel Collections</title>
-    <link rel="stylesheet" href="./css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/bootstrap.min.css.map">
-    <link rel="stylesheet" href="./css/bootstrap/_media.css">
+    <title>Sparkle Collections</title>
+    <link rel="icon" href="./images/logo.png" type="image/png">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <!-- First Navbar (div for logo, sign-in, and cart icons) -->
-    <div class="container first-navbar">
-        <div class="d-flex justify-content-between align-items-center">
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <style>
+        body {
+            background: #1F1C2C;
+            background: -webkit-linear-gradient(to right, #1F1C2C, #928DAB);
+            background: linear-gradient(to right, #1F1C2C, #928DAB);
+        }
+
+        ul li a {
+            color: #888 !important;
+            font-size: 0.9rem;
+        }
+
+        .navbar-brand {
+            font-size: 1.25rem;
+            color: #888 !important;
+        }
+
+        .new-arrivals-header {
+            font-size: 1.6rem;
+            color: #888 !important;
+
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: #888 !important;
+            font-size: 14px;
+        }
+
+        .landing {
+            height: auto;
+        }
+
+        .landing .column {
+            padding: 20px;
+        }
+
+        .message-container {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            position: absolute;
+            width: 100%;
+            height: 400px;
+            text-align: center;
+            font-size: 2.0rem;
+            color: white;
+            background: #606c88;
+            background: -webkit-linear-gradient(to right, #1F1C2C, #525c74);
+            background: linear-gradient(to right, #1F1C2C, #545f78);
+            padding: 26px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(100%) scale(0.8);
+            animation: cardAnimation 12s linear infinite;
+        }
+
+        .message p {
+            font-size: 1rem;
+        }
+
+        .message:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .message:nth-child(2) {
+            animation-delay: 5s;
+        }
+
+        .message:nth-child(3) {
+            animation-delay: 9s;
+        }
+
+        .message:nth-child(4) {
+            animation-delay: 14s;
+        }
+
+        @keyframes cardAnimation {
+            0% {
+                opacity: 0;
+                transform: translateY(100%) scale(0.8);
+            }
+
+            10%,
+            30% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            40%,
+            60% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+
+            70%,
+            90% {
+                opacity: 0;
+                transform: translateY(-100%) scale(0.8);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-100%) scale(0.8);
+            }
+        }
+
+        .animated-image {
+            animation: fade-in 3s ease-in-out infinite alternate;
+            max-width: 100%;
+            height: auto;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0.8;
+            }
+
+            to {
+                opacity: 2;
+            }
+        }
+
+        .d-flex.justify-content-end {
+            justify-content: flex-end !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Combined Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
             <!-- Logo -->
-            <a class="navbar-brand" href="#" style="font-size: 30px; color: #888;">Sparkle Collections</a>
-
-            <!-- Sign in, favorites, and cart icons -->
-            <div class="d-flex align-items-center">
-                <a class="nav-link" href="./pages/login.html" style="font-size: 20px; color: #888;"><i class="bi bi-person-fill"></i> Sign in</a>
-                <a class="nav-link" href="#" style="font-size: 20px; color: #888;"><i class="bi bi-heart-fill"></i></a>
-                <a class="nav-link" href="#" style="font-size: 20px; color: #888;"><i class="bi bi-cart-fill"></i></a>
+            <a class="navbar-brand" href="#">Sparkle Collections</a>
+            <!-- Navbar Toggler Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Content -->
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <!-- Center Links -->
+                <ul class="navbar-nav mx-auto">
+                    <!-- Clothing Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clothing</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="#">Men's Clothing</a></li>
+                            <li><a class="dropdown-item" href="#">Women's Clothing</a></li>
+                            <li><a class="dropdown-item" href="#">Kids Clothing</a></li>
+                            <li><a class="dropdown-item" href="#">Sportswear</a></li>
+                        </ul>
+                    </li>
+                    <!-- Shoes Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shoes</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                            <li><a class="dropdown-item" href="#">Sneakers</a></li>
+                            <li><a class="dropdown-item" href="#">Boots</a></li>
+                            <li><a class="dropdown-item" href="#">Sandals</a></li>
+                            <li><a class="dropdown-item" href="#">High Heels</a></li>
+                            <li><a class="dropdown-item" href="#">Slippers</a></li>
+                        </ul>
+                    </li>
+                    <!-- Accessories Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accessories</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
+                            <li><a class="dropdown-item" href="#">Bags</a></li>
+                            <li><a class="dropdown-item" href="#">Hats</a></li>
+                            <li><a class="dropdown-item" href="#">Belts</a></li>
+                            <li><a class="dropdown-item" href="#">Scarves</a></li>
+                            <li><a class="dropdown-item" href="#">Jewelry</a></li>
+                        </ul>
+                    </li>
+                    <!-- Exclusive Items Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Exclusive Items</a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
+                            <li><a class="dropdown-item" href="#">Limited Edition</a></li>
+                            <li><a class="dropdown-item" href="#">Designer Collection</a></li>
+                            <li><a class="dropdown-item" href="#">Luxury Items</a></li>
+                            <li><a class="dropdown-item" href="#">Customized Products</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- Right Links -->
+                <div class="navbar-nav ml-auto">
+                    <a id="sign_in" class="nav-link mr-3" href="./pages/login.html"
+                        style="font-size: 14px; color: #888;"><i class="bi bi-person-fill"></i> Sign in</a>
+                    <a class="nav-link mr-3" href="#">
+                        <i class="bi bi-heart-fill"></i>
+                    </a>
+                    <a class="nav-link" href="http://localhost:3000/pages/cart.html">
+                        <i class="bi bi-cart-fill"></i>
+                        <span id="cart-item-count" class="badge badge-pill badge-danger"></span>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-
-
-    <!-- Second Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light second-navbar">
-      <div class="container">
-        <!-- Navbar Toggler Button -->
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar Links -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mx-auto">
-            <!-- Dropdown Menu Items -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown1"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Clothing</a
-              >
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                .
-                <li><a class="dropdown-item" href="#">Men's Clothing</a></li>
-                <li><a class="dropdown-item" href="#">Women's Clothing</a></li>
-                <li><a class="dropdown-item" href="#">Kids Clothing</a></li>
-                <li><a class="dropdown-item" href="#">Sportswear</a></li>
-              </ul>
-            </li>
-            <!-- Add more dropdown items as needed -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown2"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Shoes</a
-              >
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                <li><a class="dropdown-item" href="#">Sneakers</a></li>
-                <li><a class="dropdown-item" href="#">Boots</a></li>
-                <li><a class="dropdown-item" href="#">Sandals</a></li>
-                <li><a class="dropdown-item" href="#">High Heels</a></li>
-                <li><a class="dropdown-item" href="#">Slippers</a></li>
-              </ul>
-            </li>
-            <!-- Add more dropdown items as needed -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown3"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Accessories</a
-              >
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                <li><a class="dropdown-item" href="#">Bags</a></li>
-                <li><a class="dropdown-item" href="#">Hats</a></li>
-                <li><a class="dropdown-item" href="#">Belts</a></li>
-                <li><a class="dropdown-item" href="#">Scarves</a></li>
-                <li><a class="dropdown-item" href="#">Jewelry</a></li>
-              </ul>
-            </li>
-            <!-- Add more dropdown items as needed -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="navbarDropdown4"
-                role="button"
-                data-toggle="dropdown"
-                aria-haspopup="true"
-                aria-expanded="false"
-                >Exclusive Items</a
-              >
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
-                <li><a class="dropdown-item" href="#">Limited Edition</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Designer Collection</a>
-                </li>
-                <li><a class="dropdown-item" href="#">Luxury Items</a></li>
-                <li>
-                  <a class="dropdown-item" href="#">Customized Products</a>
-                </li>
-              </ul>
-            </li>
-            <!-- Add more dropdown items as needed -->
-          </ul>
         </div>
-      </div>
     </nav>
-
     <!-- Main Section -->
-    <div class="main-section">
-        <!-- Filter Section -->
-        <div class="filter-section">
-            <div class="box border-bottom">
-            <div class="filter-div d-flex p-3 justify-content-between align-items-center">
-                <h4 class="text-Capitalize">Filters</h4>
-                <!-- Close Button -->
-                <span class=" close-filter" type="button">
-                <i class="bi bi-x"></i> 
-                </span>
+    <div class="container landing">
+        <div class="row">
+            <div class="column col-12 col-md-6 order-1 order-md-1">
+                <div class="message-container">
+                    <div class="message">
+                        <h2>Welcome to Sparkle Collections</h2>
+                        <p>Where shopping is made easy, quick, and seamless delivery.</p>
+                    </div>
+                    <div class="message">
+                        <h2>Find Elegant and Trendy Clothing</h2>
+                        <p>From a cheaper price of $59.99, you will find exactly what you are looking for.</p>
+                    </div>
+                    <div class="message">
+                        <h2>Exclusive Offers Just for You</h2>
+                        <p>Sign up now and get a 20% discount on your first purchase.</p>
+                    </div>
+                    <div class="message">
+                        <h2>Discover New Arrivals</h2>
+                        <p>Stay ahead of the fashion curve with our latest collections.</p>
+                    </div>
+                </div>
+                <div class="col pt-4 mt-4 text-white">
+                    <div>
+                        <p>We’ve curated a beautiful collection of lifestyle items that will make your day-to-day a
+                            little easier. Women's clothing, kids' clothing, exclusive items, and more—you’ll find it
+                            all here.</p>
+                    </div>
+                    <div class="d-flex justify-content-end align-items-center w-100">
+                        <a href="./pages/product.html" class="slanted-button">Shop Now</a>
+                    </div>
+                    <p class="text-center mt-5"><small>Sign up <a href="./pages/signup.html">here</a> to get 20%
+                            discount</small></p>
+                </div>
             </div>
-            <div class="filter-content">
-                <!-- Filter Category: Categories -->
-                <div class="filter-category">
-                <div class="filter-div d-flex p-3 justify-content-between align-items-center" style="transition: background-color 0.3s;">
-                    <h5>Categories</h5>
-                    <span class="subcategory-toggle" type="button" data-toggle="collapse" data-target="#categoriesSubcategories" aria-expanded="false" aria-controls="categoriesSubcategories">
-                    <i class="bi bi-plus"></i>
-                    </span>
-                </div>
-                <ul class="collapse" id="categoriesSubcategories">
-                    <li><label><input type="checkbox" value="footwear" /> Footwear (650)</label></li>
-                    <li><label><input type="checkbox" value="clothing" /> Clothing (1477)</label></li>
-                    <li><label><input type="checkbox" value="accessories" /> Accessories (337)</label></li>
-                    <!-- Add more categories as needed -->
-                </ul>
-                </div>
-                <!-- Filter Category: Color -->
-                <div class="filter-category">
-                <div class="filter-div d-flex p-3 justify-content-between align-items-center">
-                    <h5>Color</h5>
-                    <span class="subcategory-toggle" type="button" data-toggle="collapse" data-target="#colorSubcategories" aria-expanded="false" aria-controls="colorSubcategories">
-                    <i class="bi bi-plus"></i>
-                    </span>
-                </div>
-                <ul class="collapse" id="colorSubcategories">
-                    <li><label><input type="checkbox" value="red" /> Red</label></li>
-                    <li><label><input type="checkbox" value="blue" /> Blue</label></li>
-                    <li><label><input type="checkbox" value="green" /> Green</label></li>
-                    <!-- Add more color options as needed -->
-                </ul>
-                </div>
-                <!-- Filter Category: Size -->
-                <div class="filter-category">
-                <div class="filter-div d-flex p-3 justify-content-between align-items-center">
-                    <h5>Size</h5>
-                    <span class=" subcategory-toggle" type="button" data-toggle="collapse" data-target="#sizeSubcategories" aria-expanded="false" aria-controls="sizeSubcategories">
-                    <i class="bi bi-plus"></i>
-                    </soan>
-                </div>
-                <ul class="collapse" id="sizeSubcategories">
-                    <li><label><input type="checkbox" value="small" /> Small</label></li>
-                    <li><label><input type="checkbox" value="medium" /> Medium</label></li>
-                    <li><label><input type="checkbox" value="large" /> Large</label></li>
-                    <!-- Add more size options as needed -->
-                </ul>
-                </div>
-                <!-- Filter Category: Waist -->
-                <div class="filter-category">
-                <div class="filter-div d-flex p-3  justify-content-between align-items-center">
-                    <h5>Waist</h5>
-                    <span class=" subcategory-toggle" type="button" data-toggle="collapse" data-target="#waistSubcategories" aria-expanded="false" aria-controls="waistSubcategories">
-                    <i class="bi bi-plus"></i>
-                    </span>
-                </div>
-                <ul class="collapse" id="waistSubcategories">
-                    <li><label><input type="checkbox" value="28" /> 28</label></li>
-                    <li><label><input type="checkbox" value="30" /> 30</label></li>
-                    <li><label><input type="checkbox" value="32" /> 32</label></li>
-                    <!-- Add more waist options as needed -->
-                </ul>
-                </div>
-                <!-- Filter Category: Fit -->
-                <div class="filter-category">
-                <div class="filter-div d-flex p-3 justify-content-between align-items-center">
-                    <h5>Fit</h5>
-                    <span class="subcategory-toggle" type="button" data-toggle="collapse" data-target="#fitSubcategories" aria-expanded="false" aria-controls="fitSubcategories">
-                    <i class="bi bi-plus"></i>
-                    </span>
-                </div>
-                <ul class="collapse" id="fitSubcategories">
-                    <li><label><input type="checkbox" value="slim-fit" /> Slim Fit</label></li>
-                    <li><label><input type="checkbox" value="regular-fit" /> Regular Fit</label></li>
-                    <li><label><input type="checkbox" value="relaxed-fit" /> Relaxed Fit</label></li>
-                    <!-- Add more fit options as needed -->
-                </ul>
-                </div>
-                <!-- Add more filter categories as needed -->
-            </div>
+            <div class="column col-12 col-md-6 order-2 order-md-2 d-flex justify-content-center align-items-center">
+                <img id="product-image" src="" alt="Animated Image" class="animated-image">
             </div>
         </div>
-  
-      <!-- Button to reopen filter section -->
-      <button
-        class="btn btn-sm btn-outline-secondary reopen-filter"
-        type="button"
-      >
-        <i class="bi bi-filter"></i> Open Filters
-      </button>
-
-      <!-- Product Section -->
-      <div class="product-section">
-        <div >
-          <div class="row" id="products" id="product_section">
-          </div>
-        </div>
-      </div>
     </div>
-       <!-- Footer -->
-       <footer class="footer mt-5 bg-dark text-white ">
+    <!-- New Arrivals Section -->
+    <section class="container mt-5">
+        <h2 class="text-left new-arrivals-header mb-4">New Arrivals</h2>
+        <div class="row" id="new-arrivals"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer mt-5 bg-dark text-white">
         <div class="container py-4">
             <div class="row">
-                <!-- Column 1: Logo, Sparkle Collections, Contact us, Our store -->
+                <!-- Column 1: Logo, Contact Us, OurStore -->
                 <div class="col-md-3">
                     <h5 class="mb-3">Sparkle Collections</h5>
                     <p>Contact us</p>
                     <p>Our store</p>
                 </div>
-                <!-- Column 2: Speak to our representatives -->
+                <!-- Column 2: Speak to Our Representatives -->
                 <div class="col-md-3">
-                 <h5 class="mb-2">Speak to our representatives</h5>
-                 <form>
-                     <div class="input-group mb-3">
-                         <input type="text" class="form-control" placeholder="Enter your message">
-                         <div class="input-group-append">
-                             <button type="submit" class="btn btn-primary" style="width: 48px;">Submit</button>
-                         </div>
-                     </div>
-                 </form>
-             </div>            
-                <!-- Column 3: Follow us on social media -->
+                    <h5 class="mb-2">Speak to our representatives</h5>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter your message">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary" style="width: 48px;">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Column 3: Follow Us on Social Media -->
                 <div class="col-md-3">
                     <h5 class="mb-2">Follow us on</h5>
                     <ul class="list-unstyled">
-                        <li class="pr-2">Twitter<i class="bi bi-twitter"></i></li>
+                        <li class="pr-2">Twitter <i class="bi bi-twitter"></i></li>
                         <li class="pr-2">Instagram <i class="bi bi-instagram"></i></li>
                         <li class="pr-2">Facebook <i class="bi bi-facebook"></i></li>
                         <li class="pr-2">Pinterest <i class="bi bi-pinterest"></i></li>
-                        <li class="pr-2">TikTok  <i class="bi bi-tiktok"></i></li>
+                        <li class="pr-2">TikTok <i class="bi bi-tiktok"></i></li>
                     </ul>
                 </div>
-                <!-- Column 4: Privacy and policies -->
+                <!-- Column 4: Privacy and Policies -->
                 <div class="col-md-3">
                     <h5 class="mb-2">Privacy and policies</h5>
                     <p>Privacy Policy</p>
                     <p>Terms of Service</p>
                 </div>
-         </div>
-     </div>
-     </footer>
- 
-     <!-- Copyright -->
-     <div class="container-fluid text-center bg-dark text-white py-3">
-         <p>&copy; 2024 Sparkle Collections. All Rights Reserved.</p>
-     </div>
-    <script src="./js/jquery-3.3.1.min.js"></script>
-    <script src="./js/popper.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/fetchUser.js"></script>
-    <script src="./js/productApi.js"></script>
+            </div>
+        </div>
 
-  </body>
+    </footer>
+    <!-- Copyright -->
+    <div class="container-fluid text-center bg-dark text-white py-3">
+        <p class="navbar-brand">&copy; 2024 Sparkle Collections. All Rights Reserved.</p>
+    </div>
+    <!-- Scripts -->
+    <script src="./js/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/fetchUser.js"></script>
+   <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        fetch('/api/products')
+            .then(response => response.json())
+            .then(data => {
+                // Filter for new arrivals
+                const newArrivals = data.filter(product => product.isNew);
+
+                // Populate new arrivals section
+                const newArrivalsContainer = document.getElementById('new-arrivals');
+                newArrivals.forEach(product => {
+                const productElement = document.createElement('div');
+                productElement.classList.add('col-lg-3', 'col-md-4', 'mb-4');
+
+                // Create carousel for product images
+                const carouselId = `carousel-${product._id}`;
+                const carouselIndicators = product.images.map((_, index) =>
+                    `<li data-target="#${carouselId}" data-slide-to="${index}" class="${index === 0 ? 'active' : ''}"></li>`
+                ).join('');
+                const carouselItems = product.images.map((image, index) =>
+                    `<div class="carousel-item ${index === 0 ? 'active' : ''}">
+                        <img src="${image}" class="d-block w-100" alt="${product.name}" style="${getInlineStyle()}">
+                    </div>`
+                ).join('');
+                
+                productElement.innerHTML = `
+                    <div class="card">
+                        <div id="${carouselId}" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                ${carouselIndicators}
+                            </ol>
+                            <div class="carousel-inner">
+                                ${carouselItems}
+                            </div>
+                            <a class="carousel-control-prev" href="#${carouselId}" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#${carouselId}" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text p-2 text-right">$${product.current_price}</p>
+                            <a href="./pages/singleProduct.html?id=${product._id}" class="slanted-button w-100 text-center">View Product</a>
+                        </div>
+                    </div>
+                `;
+                
+                function getInlineStyle() {
+                    // Check if the screen size is medium or larger
+                    const isMediumOrLargerScreen = window.matchMedia('(min-width: 768px)').matches;
+                
+                    // Define the style based on the screen size
+                    const imageStyle = isMediumOrLargerScreen ? 'height: 250px; width: 200px;' : '';
+                
+                    return imageStyle;
+                }
+
+                    newArrivalsContainer.appendChild(productElement);
+                });
+
+                // Update product image carousel
+                const productImages = data.map(product => product.images[0]);
+                let currentIndex = 0;
+
+                function updateImage() {
+                    const imgElement = document.getElementById('product-image');
+                    imgElement.src = productImages[currentIndex];
+                    currentIndex = (currentIndex + 1) % productImages.length;
+                }
+
+                setInterval(updateImage, 5000);
+                updateImage();
+            })
+            .catch(error => console.error('Error fetching product images:', error));
+    });
+   </script>
+</body>
+
 </html>
