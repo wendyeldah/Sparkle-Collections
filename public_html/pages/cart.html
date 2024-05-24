@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sparkle Collections</title>
+    <link rel="icon" href="../images/logo.png" type="image/png">
+
     <!-- Link to Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
@@ -15,26 +18,41 @@
             margin-bottom: 10px;
             padding: 10px;
         }
-    
+
         /* Style for product image */
         .cart-item img {
             max-width: 50px;
             max-height: 50px;
         }
+
+        .cart-section {
+            height: auto;
+        }
     </style>
 </head>
+
 <body>
     <!-- First Navbar (div for logo, sign-in, and cart icons) -->
-    <div class="container first-navbar">
-        <div class="d-flex justify-content-between align-items-center">
+    <div class="container first-navbar mb-2">
+        <div class="row align-items-center">
             <!-- Logo -->
-            <a class="navbar-brand" href="#" style="font-size: 30px; color: #888;">Sparkle Collections</a>
+            <div class="col-sm-12 col-md-3 text-center text-md-left mb-3 mb-md-0">
+                <a class="navbar-brand" href="/" style="font-size: 1.25rem; color: #888;">Sparkle Collections</a>
+            </div>
 
-            <!-- Sign in, favorites, and cart icons -->
-            <div class="d-flex align-items-center">
-                <a class="nav-link" href="./login.html" style="font-size: 20px; color: #888;"><i class="bi bi-person-fill"></i> Sign in</a>
-                <a class="nav-link" href="#" style="font-size: 20px; color: #888;"><i class="bi bi-heart-fill"></i></a>
-                <a class="nav-link" href="#" style="font-size: 20px; color: #888;"><i class="bi bi-cart-fill"></i></a>
+            <!-- Sign in, favorites, and cart -->
+            <div class="col-sm-12 col-md-9 text-center text-md-right">
+                <div class="d-flex justify-content-end align-items-center">
+                    <a id="sign_in" class="nav-link mr-3" href="./pages/login.html"
+                        style="font-size: 14px; color: #888;"><i class="bi bi-person-fill"></i> Sign in</a>
+                    <a class="nav-link mr-3" href="#" style="font-size: 14px; color: #888;"><i
+                            class="bi bi-heart-fill"></i></a>
+                    <a class="nav-link" href="http://localhost:3000/pages/cart.html"
+                        style="font-size: 14px; color: #888;">
+                        <i class="bi bi-cart-fill"></i>
+                        <span id="cart-item-count" class="badge badge-pill badge-danger"></span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
@@ -42,15 +60,8 @@
     <nav class="navbar navbar-expand-lg navbar-light second-navbar">
         <div class="container">
             <!-- Navbar Toggler Button -->
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-            >
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -59,84 +70,51 @@
                 <ul class="navbar-nav mx-auto">
                     <!-- Dropdown Menu Items -->
                     <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown1"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >Clothing</a
-                        >
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Clothing</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
-                            .
-                            <li><a class="dropdown-item" href="#">Men's Clothing</a></li>
-                            <li><a class="dropdown-item" href="#">Women's Clothing</a></li>
-                            <li><a class="dropdown-item" href="#">Kids Clothing</a></li>
-                            <li><a class="dropdown-item" href="#">Sportswear</a></li>
+                            <li><a class="dropdown-item" href="/mens">Men's Clothing</a></li>
+                            <li><a class="dropdown-item" href="/womens">Women's Clothing</a></li>
+                            <li><a class="dropdown-item" href="kids">Kids Clothing</a></li>
+                            <li><a class="dropdown-item" href="/sportswear">Sportswear</a></li>
                         </ul>
                     </li>
                     <!-- Add more dropdown items as needed -->
                     <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown2"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >Shoes</a
-                        >
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shoes</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                            <li><a class="dropdown-item" href="#">Sneakers</a></li>
-                            <li><a class="dropdown-item" href="#">Boots</a></li>
-                            <li><a class="dropdown-item" href="#">Sandals</a></li>
-                            <li><a class="dropdown-item" href="#">High Heels</a></li>
-                            <li><a class="dropdown-item" href="#">Slippers</a></li>
+                            <li><a class="dropdown-item" href="/sneakers">Sneakers</a></li>
+                            <li><a class="dropdown-item" href="/boots">Boots</a></li>
+                            <li><a class="dropdown-item" href="/sandals">Sandals</a></li>
+                            <li><a class="dropdown-item" href="/high-heels">High Heels</a></li>
+                            <li><a class="dropdown-item" href="/slippers">Slippers</a></li>
                         </ul>
                     </li>
                     <!-- Add more dropdown items as needed -->
                     <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown3"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >Accessories</a
-                        >
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown3" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Accessories</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown3">
-                            <li><a class="dropdown-item" href="#">Bags</a></li>
-                            <li><a class="dropdown-item" href="#">Hats</a></li>
-                            <li><a class="dropdown-item" href="#">Belts</a></li>
-                            <li><a class="dropdown-item" href="#">Scarves</a></li>
-                            <li><a class="dropdown-item" href="#">Jewelry</a></li>
+                            <li><a class="dropdown-item" href="/bags">Bags</a></li>
+                            <li><a class="dropdown-item" href="/hats">Hats</a></li>
+                            <li><a class="dropdown-item" href="/belts">Belts</a></li>
+                            <li><a class="dropdown-item" href="/scarves">Scarves</a></li>
+                            <li><a class="dropdown-item" href="/jewelry">Jewelry</a></li>
                         </ul>
                     </li>
                     <!-- Add more dropdown items as needed -->
                     <li class="nav-item dropdown">
-                        <a
-                            class="nav-link dropdown-toggle"
-                            href="#"
-                            id="navbarDropdown4"
-                            role="button"
-                            data-toggle="dropdown"
-                            aria-haspopup="true"
-                            aria-expanded="false"
-                            >Exclusive Items</a
-                        >
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Exclusive Items</a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown4">
                             <li><a class="dropdown-item" href="#">Limited Edition</a></li>
                             <li>
-                                <a class="dropdown-item" href="#">Designer Collection</a>
+                                <a class="dropdown-item" href="/designers-collections">Designer Collection</a>
                             </li>
-                            <li><a class="dropdown-item" href="#">Luxury Items</a></li>
+                            <li><a class="dropdown-item" href="/luxury">Luxury Items</a></li>
                             <li>
-                                <a class="dropdown-item" href="#">Customized Products</a>
+                                <a class="dropdown-item" href="/customized">Customized Products</a>
                             </li>
                         </ul>
                     </li>
@@ -146,11 +124,15 @@
         </div>
     </nav>
     <div class="container mt-5">
-     <!-- Cart section  -->
+        <!-- Cart section  -->
         <div class="cart-section"></div>
+        <div class="total-price-section mt-5 text-right">
+            <h5>Total Price: $<span id="total-price">0.00</span></h5>
+            <button class="btn btn-primary mt-3 checkout-btn-custom" id="checkout-btn">Proceed to Checkout</button>
+        </div>
     </div>
-     <!-- Footer -->
-     <footer class="footer mt-5 bg-dark text-white ">
+    <!-- Footer -->
+    <footer class="footer mt-5 bg-dark">
         <div class="container py-4">
             <div class="row">
                 <!-- Column 1: Logo, Sparkle Collections, Contact us, Our store -->
@@ -161,16 +143,16 @@
                 </div>
                 <!-- Column 2: Speak to our representatives -->
                 <div class="col-md-3">
-                 <h5 class="mb-2">Speak to our representatives</h5>
-                 <form>
-                     <div class="input-group mb-3">
-                         <input type="text" class="form-control" placeholder="Enter your message">
-                         <div class="input-group-append">
-                             <button type="submit" class="btn btn-primary" style="width: 48px;">Submit</button>
-                         </div>
-                     </div>
-                 </form>
-             </div>            
+                    <h5 class="mb-2">Speak to our representatives</h5>
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Enter your message">
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary" style="width: 48px;">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
                 <!-- Column 3: Follow us on social media -->
                 <div class="col-md-3">
                     <h5 class="mb-2">Follow us on</h5>
@@ -179,7 +161,7 @@
                         <li class="pr-2">Instagram <i class="bi bi-instagram"></i></li>
                         <li class="pr-2">Facebook <i class="bi bi-facebook"></i></li>
                         <li class="pr-2">Pinterest <i class="bi bi-pinterest"></i></li>
-                        <li class="pr-2">TikTok  <i class="bi bi-tiktok"></i></li>
+                        <li class="pr-2">TikTok <i class="bi bi-tiktok"></i></li>
                     </ul>
                 </div>
                 <!-- Column 4: Privacy and policies -->
@@ -188,150 +170,327 @@
                     <p>Privacy Policy</p>
                     <p>Terms of Service</p>
                 </div>
-         </div>
-     </div>
-     </footer>
+            </div>
+        </div>
+    </footer>
     <!-- Copyright -->
     <div class="container-fluid text-center bg-dark text-white py-3">
         <p>&copy; 2024 Sparkle Collections. All Rights Reserved.</p>
     </div>
+    <!-- Modal -->
+    <div class="modal fade" id="checkoutModal" tabindex="-1" role="dialog" aria-labelledby="checkoutModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="checkoutModalLabel">Confirm Purchase</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to buy the items for $<span id="modal-total-price">0.00</span>?
+                </div>
+                <div class="modal-footer">
+                    <button id="continue-shopping-btn" type="button" class="btn btn-primary" data-dismiss="modal"
+                        style="background-color: black; color: white; border: black;">Back to Shopping</button>
+                    <button id="proceed-btn" type="button" class="btn btn-primary">Proceed</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetchCartItems();
+            // Retrieve logged-in user data from localStorage
+            const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    fetchCartItems();
-});
+            if (loggedInUser) {
+                // Update UI to display logged-in user information
+                const navbar = document.getElementById("sign_in");
+                navbar.innerHTML = `
+    <div class="d-flex justify-content-between align-items-center">
+        <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Welcome, ${loggedInUser.firstName}
+        </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <li><a class="dropdown-item" href="#">Update Profile</a></li>
+              <li><a class="dropdown-item" href="#">Profile Settings</a></li>
+              <li><a class="dropdown-item" href="#">Cart</a></li>
+              <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+    </div>
+    `;
+            }
+        });
 
-function fetchCartItems() {
-    fetch('/api/cart')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
+        function fetchCartItems() {
+            fetch('/api/cart')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(cartData => {
+                    return fetch('/api/products')
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(productData => {
+                            const cartItems = cartData.cartItems.map(cartItem => {
+                                const product = productData.find(product => product._id === cartItem.productId);
+                                if (product) {
+                                    return {
+                                        ...cartItem,
+                                        productName: product.name,
+                                        price: product.current_price,
+                                        image: product.images[0]
+                                    };
+                                } else {
+                                    console.log(`Product with ID ${cartItem.productId} not found.`);
+                                    return {
+                                        ...cartItem,
+                                        productName: 'Product Not Found',
+                                        price: 0,
+                                        image: ''
+                                    };
+                                }
+                            });
+                            return cartItems;
+                        });
+                })
+                .then(cartItems => {
+                    console.log(cartItems)
+                    const totalItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+                    const cartItemCountBadge = document.getElementById('cart-item-count');
+                    cartItemCountBadge.textContent = totalItemCount;
+
+                    const cartContainer = document.querySelector('.cart-section');
+                    cartContainer.innerHTML = '';
+                    cartItems.forEach(cartItem => {
+                        const div = document.createElement('div');
+                        div.classList.add('cart-item', 'row', 'd-flex', 'align-items-center');
+
+                        const imageCol = document.createElement('div');
+                        imageCol.classList.add('col');
+                        const image = document.createElement('img');
+                        image.src = cartItem.image;
+                        image.alt = cartItem.productName;
+                        imageCol.appendChild(image);
+                        div.appendChild(imageCol);
+
+                        const nameCol = document.createElement('div');
+                        nameCol.classList.add('col');
+                        nameCol.textContent = cartItem.productName;
+                        div.appendChild(nameCol);
+
+                        // Create a div to contain the quantity controls
+                        const quantityCol = document.createElement('div');
+                        quantityCol.classList.add('col', 'd-flex', 'align-items-center');
+
+                        // Decrement button
+                        const decrementButton = document.createElement('button');
+                        decrementButton.textContent = '-';
+                        decrementButton.classList.add('btn', 'btn-outline-secondary', 'mr-2');
+                        decrementButton.addEventListener('click', () => updateQuantity(cartItem.productId, cartItem.quantity - 1));
+
+                        // Quantity input
+                        const quantityInput = document.createElement('input');
+                        quantityInput.type = 'number';
+                        quantityInput.value = cartItem.quantity;
+                        quantityInput.min = '1';
+                        quantityInput.classList.add('quantity-input', 'text-center', 'form-control');
+
+                        // Increment button
+                        const incrementButton = document.createElement('button');
+                        incrementButton.textContent = '+';
+                        incrementButton.classList.add('btn', 'btn-outline-secondary', 'ml-2');
+                        incrementButton.addEventListener('click', () => updateQuantity(cartItem.productId, cartItem.quantity + 1));
+
+                        // Append the buttons and input to the quantity column
+                        quantityCol.appendChild(decrementButton);
+                        quantityCol.appendChild(quantityInput);
+                        quantityCol.appendChild(incrementButton);
+
+                        // Append the quantity column to the row
+                        div.appendChild(quantityCol);
+
+
+                        const priceCol = document.createElement('div');
+                        priceCol.classList.add('col');
+                        priceCol.textContent = `$${(cartItem.price * cartItem.quantity).toFixed(2)}`;
+                        div.appendChild(priceCol);
+
+                        const removeCol = document.createElement('div');
+                        removeCol.classList.add('col');
+                        // Remove button
+                        const removeButton = document.createElement('button');
+                        removeButton.style = "border:1px solid red;"
+                        removeButton.classList.add('btn-sm', 'ml-2');
+                        removeButton.innerHTML = '<i style="color:red;" class="bi bi-trash"></i>';
+                        removeButton.addEventListener('click', () => removeItem(cartItem.productId));
+
+                        // Append the remove button to the quantity column
+
+                        removeCol.appendChild(removeButton);
+                        div.appendChild(removeCol);
+
+                        cartContainer.appendChild(div);
+                    });
+
+                    calculateTotalPrice(cartItems);
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+            // Get the cart item count badge element
+
         }
-        return response.json();
-    })
-    .then(cartData => {
-        // Fetch products to get additional information
-        return fetch('/api/products')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
+
+
+        function updateQuantity(productId, newQuantity) {
+            if (newQuantity < 1) return;
+            fetch(`/api/cart/update/${productId}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ quantity: newQuantity })
             })
-            .then(productData => {
-    // Combine cart items with product information
-    const cartItems = cartData.cartItems.map(cartItem => {
-        // Find the corresponding product in the productData array
-        const product = productData.find(product => product._id === cartItem.productId);
-        
-        // Check if product is found
-        if (product) {
-            // If product is found, extract the desired properties
-            const productName = product.name;
-            const productImage = product.images[0]; // Assuming you want the first image
-            const productPrice = product.current_price;
-            
-            // Return the cart item with additional product information
-            return { 
-                ...cartItem, 
-                productName: productName, 
-                price: productPrice, 
-                image: productImage 
-            };
-        } else {
-            // If product is not found, handle the case gracefully
-            console.log(`Product with ID ${cartItem.productId} not found.`);
-            return { 
-                ...cartItem, 
-                productName: 'Product Not Found', 
-                price: 0, 
-                image: '' 
-            };
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    fetchCartItems();
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
         }
-    });
-    return cartItems;
-});
 
-    })
-    .then(cartItems => {
-    // Populate the cart section with fetched items
-    const cartContainer = document.querySelector('.cart-section');
-    cartContainer.innerHTML = ''; // Clear existing content
-
-    cartItems.forEach(cartItem => {
-        const div = document.createElement('div');
-        div.classList.add('cart-item', 'row', 'd-flex', 'align-items-center');
-
-        // Create columns for each cart item detail
-        const imageCol = document.createElement('div');
-        imageCol.classList.add('col');
-        const image = document.createElement('img');
-        image.src = cartItem.image; // Assuming you have the image URL in cartItem.image
-        image.alt = cartItem.productName;
-        imageCol.appendChild(image);
-        div.appendChild(imageCol);
-
-        const nameCol = document.createElement('div');
-        nameCol.classList.add('col');
-        nameCol.textContent = cartItem.productName;
-        div.appendChild(nameCol);
-
-        const quantityCol = document.createElement('div');
-        quantityCol.classList.add('col');
-        const quantityInput = document.createElement('input');
-        quantityInput.type = 'number';
-        quantityInput.value = cartItem.quantity;
-        quantityInput.min = '1'; // Assuming minimum quantity is 1
-        quantityInput.classList.add('quantity-input');
-        quantityCol.appendChild(quantityInput);
-        div.appendChild(quantityCol);
-
-        const priceCol = document.createElement('div');
-        priceCol.classList.add('col');
-        priceCol.textContent = cartItem.price * cartItem.quantity; // Assuming you calculate the total price
-        div.appendChild(priceCol);
-
-        const removeCol = document.createElement('div');
-        removeCol.classList.add('col');
-        const removeButton = document.createElement('button');
-        removeButton.classList.add('btn', 'btn-danger', 'btn-sm');
-        removeButton.textContent = 'Remove';
-        removeButton.addEventListener('click', () => removeItem(cartItem.productId));
-        removeCol.appendChild(removeButton);
-        div.appendChild(removeCol);
-
-        // Append the row to the cart container
-        cartContainer.appendChild(div);
-    });
-})
-
-    .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-    });
-}
-
-
-function removeItem(productId) {
-    fetch(`/api/cart/remove/${productId}`, {
-        method: 'DELETE'
-    })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
+        function removeItem(productId) {
+            fetch(`/api/cart/remove/${productId}`, {
+                method: 'DELETE'
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    fetchCartItems();
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
         }
-        fetchCartItems(); // Refresh cart items after removal
-    })
-    .catch(error => {
-        console.error('There was a problem with the fetch operation:', error);
-    });
-}
 
-</script> 
-       <!-- Link to jQuery, Popper.js, and Bootstrap JS -->
-       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    </body> 
+        function updateCartItemCount(cartItems) {
+            console.log(cartItems)
+            const totalItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
+            const cartItemCountBadge = document.getElementById('cart-item-count');
+            cartItemCountBadge.textContent = totalItemCount;
+        }
+
+        function calculateTotalPrice(cartItems) {
+            const totalPrice = cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+            document.getElementById('total-price').textContent = totalPrice.toFixed(2);
+        }
+
+        document.getElementById('checkout-btn').addEventListener('click', () => {
+            const totalPrice = document.getElementById('total-price').textContent;
+            document.getElementById('modal-total-price').textContent = totalPrice;
+            $('#checkoutModal').modal('show');
+        });
+        document.getElementById('proceed-btn').addEventListener('click', () => {
+            const orderId = 'ORD' + new Date().getTime();
+            // Fetch cart items from the API
+            fetch('/api/cart')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(cartData => {
+                    // Extract the cart items from the response
+                    const cartItems = cartData.cartItems;
+                    const totalPrice = document.getElementById('total-price').textContent;
+                    const orderData = {
+                        orderId: orderId,
+                        cartItems: cartItems,
+                        totalPrice: totalPrice,
+                        orderTime: new Date().toISOString()
+                    };
+                    localStorage.setItem('orderData', JSON.stringify(orderData));
+                    window.location.href = 'thankyou.html';
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        });
+
+    </script>
+    <!-- Update Profile Modal -->
+    <div class="modal fade" id="updateProfileModal" tabindex="-1" aria-labelledby="updateProfileModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-side modal-dialog-right">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="updateProfileModalLabel">Update Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateProfileForm">
+                        <div class="mb-3">
+                            <label for="firstName" class="form-label">First Name</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="lastName" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="address" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="city" class="form-label">City</label>
+                            <input type="text" class="form-control" id="city" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="state" class="form-label">State</label>
+                            <input type="text" class="form-control" id="state" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="zipCode" class="form-label">Zip Code</label>
+                            <input type="text" class="form-control" id="zipCode" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="text" class="form-control" id="phone" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100"
+                            style="padding: 10px; background-color: black; font-size: 18px; color: white; border: black;">Update</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+    <script src="../js/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
 </html>
-       
