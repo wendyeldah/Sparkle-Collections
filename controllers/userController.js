@@ -31,17 +31,40 @@ exports.getUserById = async (req, res) => {
 };
 
 exports.updateUser = async (req, res) => {
+    const userId = req.params.userId;
+    const updateData = req.body;
+
     try {
-        const updatedUser = await User.findByIdAndUpdate(req.params.userId, req.body, {
-            new: true,
-            runValidators: true
-        });
-        if (!updatedUser) {
-            return res.status(404).json({ status: 'fail', message: 'User not found' });
+        const user = await User.findById(userId);
+
+        if (!user) {
+            return res.status(404).json({ success: false, message: 'User not found' });
         }
-        res.status(200).json({ status: 'success', data: { user: updatedUser } });
-    } catch (err) {
-        res.status(400).json({ status: 'fail', message: err.message });
+
+        if (updateData.currentPassword) {
+            // Profile settings update
+            if (updateData.currentPassword === user.password) { 
+                user.email = updateData.email;
+                user.password = updateData.newPassword;
+            } else {
+                return res.status(400).json({ success: false, message: 'Current password is incorrect' });
+            }
+        } else {
+            // Profile update
+            user.firstName = updateData.firstName;
+            user.lastName = updateData.lastName;
+            user.address = updateData.address;
+            user.city = updateData.city;
+            user.state = updateData.state;
+            user.zipCode = updateData.zipCode;
+            user.phone = updateData.phone;
+        }
+
+        await user.save();
+        res.json({ success: true, message: 'User updated successfully' });
+    } catch (error) {
+        console.error('Error updating user:', error);
+        res.status(500).json({ success: false, message: 'An error occurred while updating the user' });
     }
 };
 
