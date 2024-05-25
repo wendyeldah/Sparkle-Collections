@@ -42,6 +42,10 @@ const productSchema = new mongoose.Schema({
     type: String,
     enum: ['women', 'footwear', 'kids', 'accessories', 'mens', 'unisex'], // Enumerated list of allowed categories
     required: true
+  },
+  isNew: {
+    type: Boolean,
+    default: false // Default value is false, meaning the product is not new
   }
 });
 
